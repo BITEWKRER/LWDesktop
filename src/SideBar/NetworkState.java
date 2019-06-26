@@ -1,6 +1,6 @@
 package SideBar;
 /**
- * @author HuHui
+ * @author comi
  * @功能：持续检测网络是否连通
  */
 
