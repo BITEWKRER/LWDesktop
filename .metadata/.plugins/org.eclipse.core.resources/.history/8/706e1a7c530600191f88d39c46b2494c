@@ -1,0 +1,11 @@
+
+package main;
+
+public class Entry {
+
+	public static void main(String[] args) {
+		String filepath = System.getProperty("user.dir") + "/src/Tranlation/History.txt";
+		System.out.println(filepath);
+
+	}
+}

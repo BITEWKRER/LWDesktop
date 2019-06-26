@@ -1,0 +1,29 @@
+package config;
+
+public class Config {
+	private static String shape;
+	private static String color;
+
+	// 静态代码块，赋初值
+	static {
+		shape = "line";
+		color = "white";
+	}
+
+	public static String getColor() {
+		return color;
+	}
+
+	public static void setColor(String color) {
+		Config.color = color;
+	}
+
+	public static String getShape() {
+		return shape;
+	}
+
+	public static void setShape(String string) {
+		Config.shape = string;
+	}
+
+}

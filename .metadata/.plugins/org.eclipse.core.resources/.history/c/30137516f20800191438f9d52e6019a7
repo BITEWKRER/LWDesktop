@@ -1,0 +1,10 @@
+package xiamiDecode;
+
+import java.io.UnsupportedEncodingException;
+
+public class XiamiEntry {
+
+	public static void main(String[] args) throws UnsupportedEncodingException {
+
+	}
+}

@@ -1,0 +1,44 @@
+package trapockage;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class Translation {
+	public String Result = "";
+	private String text;
+	private int flag;
+
+	public Translation(String text, int flag) {
+		this.flag = flag;
+		this.text = text;
+		traslatate();
+	}
+
+	public void traslatate() {
+		String[] pra = { "", "", "", "" };
+
+		try {
+			String pythonFile = System.getProperty("user.dir") + "\\src\\trapockage\\Spider.py";
+			System.out.println(pythonFile);
+			pra[0] = "python";
+			pra[1] = pythonFile;
+			String[] paramter = new String[] { pra[0], pra[1], String.valueOf(text), String.valueOf(flag) };
+			Process pr = Runtime.getRuntime().exec(paramter);
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+
+			String call;
+			while ((call = in.readLine()) != null) {
+				this.Result += "\n" + call;
+			}
+			in.close();
+			pr.waitFor();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

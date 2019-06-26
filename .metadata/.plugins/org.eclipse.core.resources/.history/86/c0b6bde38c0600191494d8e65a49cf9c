@@ -1,0 +1,50 @@
+package View;
+
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+
+import javax.swing.JPanel;
+
+import Function.line;
+
+public class cavans extends JPanel {
+	private line line;
+	public cavans() {
+		init();
+	}
+	public  void init() {
+		this.setBackground(Color.gray);
+		MouseHandler handler=new  MouseHandler();
+		this.addMouseListener(handler);
+		this.addMouseMotionListener(handler);
+	}
+	private class MouseHandler extends MouseAdapter{
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mousePressed(e);
+			line=new line();
+			line.setSpPoint(e.getPoint());
+		}
+		@Override
+		public void mouseDragged(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseDragged(e);
+			line.setePoint(e.getPoint());
+			line.draw(getGraphics());
+			line.setSpPoint(e.getPoint());
+		}
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			super.mouseReleased(e);
+			line.draw(getGraphics());
+		}
+	}
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+}

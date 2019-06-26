@@ -1,0 +1,133 @@
+package jmp123.gui;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import sun.print.resources.serviceui_zh_TW;
+
+import com.nsu.zhongsheng.Mwindow;
+
+@SuppressWarnings("serial")
+public class PlayList extends JList {
+	private DefaultListModel dataListModel;
+	private int curIndex = -1; //当前正在播放的文件
+	private int nextIndex; //下一播放的文件
+	public PlayList() {
+		super();
+		dataListModel = new DefaultListModel();
+		setModel(dataListModel);
+		int fontSize = getFont().getSize();
+		setFixedCellHeight(3 * fontSize / 2);
+		setOpaque(false); // 文字背景透明
+
+	}
+
+	public synchronized int getCount() {
+		return dataListModel.getSize();
+	}
+	public synchronized void append(String title, String path) {
+		dataListModel.addElement(new PlayListItem(title, path));
+		
+	}
+	
+
+	/**
+	 * 获取指定的列表项。
+	 * @param index 列表项的索引。
+	 * @return 列表项。
+	 */
+	public synchronized PlayListItem getPlayListItem(int index) {
+		return (PlayListItem) dataListModel.get(index);
+	}
+
+	/**
+	 * 从列表中删除指定项。
+	 * @param index 将要删除的列表项的索引。
+	 */
+	public synchronized void removeItem(int index) {
+		if(index < 0 || index >= dataListModel.getSize())
+			return;
+		dataListModel.remove(index);
+		if(index == curIndex)
+			curIndex = -1;
+
+		if(index >= dataListModel.getSize())
+			index = 0;
+		nextIndex = index;
+		setSelectedIndex(index);
+	}
+
+	/**
+	 * 清空列表。
+	 */
+	public synchronized void clear() {
+		nextIndex = 0;
+		curIndex = -1;
+		dataListModel.clear();
+	}
+
+	/**
+	 * 获取当前正在播放的文件的列表索引。
+	 * @return 当前正在播放的文件的列表索引。
+	 */
+	public synchronized int getCurrentIndex() {
+		return curIndex;
+	}
+
+	/**
+	 * 获取下一个可用的列表索引。
+	 * 
+	 * @return 一个可用的列表索引。当列表中的文件全部不可用时返回值为-1。
+	 */
+	public synchronized int getNextIndex() {
+		int i, count = dataListModel.getSize();
+		if (nextIndex == -1)
+			curIndex = (curIndex + 1 == count) ? 0 : curIndex + 1;
+		else {
+			curIndex = nextIndex;
+			nextIndex = -1;
+		}
+
+		for (i = 0; i < count; i++) {
+			PlayListItem item = (PlayListItem) dataListModel.get(curIndex);
+			if (item.available()) {
+				repaint();
+				return curIndex;
+			}
+			curIndex = (curIndex + 1 == count) ? 0 : curIndex+1;
+		}
+		return -1;
+	}
+	/**
+	 * 设置下一个即将被播放的文件。同时要中断当前播放的文件时调用此方法。
+	 * @param i 下一个即将被播放的文件索引。
+	 */
+	public synchronized void setNextIndex(int i) {
+		nextIndex = (i < 0 || i >= dataListModel.getSize()) ? 0 : i;
+	}
+	/**
+	 * 播放当前文件时是否被用户调用 {@link #setNextIndex(int)} 方法中断。
+	 * @return 返回<b>true</b>表示播放当前文件时是否被用户中断，否则返回<b>false</b>。
+	 */
+	public synchronized boolean isInterrupted() {
+		return nextIndex != -1;
+	}
+
+}

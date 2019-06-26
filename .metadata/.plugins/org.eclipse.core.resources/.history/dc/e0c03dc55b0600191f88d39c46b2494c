@@ -1,0 +1,12 @@
+package GetInfoInComputer;
+
+import java.lang.management.ManagementFactory;
+
+
+public class main {
+	public static void main(String[] args) {
+		//getinfo.getDisk();
+//		System.out.println(getinfo.getMemery());
+//		System.out.println(getinfo.getCpuRatioForWindows());
+	}
+}

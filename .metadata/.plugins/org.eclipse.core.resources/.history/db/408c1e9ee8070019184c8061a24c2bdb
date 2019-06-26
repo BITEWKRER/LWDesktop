@@ -1,0 +1,65 @@
+package main;
+
+import javax.swing.ImageIcon;
+
+import common.mMouseHandler;
+import common.window;
+import function.Oval;
+
+public class Mywindow extends window {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8576783175297605678L;
+	public int flag = 1;
+	public ImageIcon micon;
+	public window Mwindow = new window();
+
+	public Mywindow() {
+		init();
+	}
+
+	/**
+	 * window init
+	 */
+	private void init() {
+
+		Mwindow = new window();
+		mMouseHandler mHandler = new mMouseHandler(Mwindow);
+		Mwindow.addMouseListener(mHandler);
+		Mwindow.addMouseMotionListener(mHandler);
+
+		// pic show
+//		micon = new ImageIcon("src/img/star.png");
+//		micon.getIconWidth(), micon.getIconHeight()
+//		Mwindow.setSize(micon.getIconWidth(), micon.getIconHeight());
+//		Mwindow.setContentPane(new mypanel(micon));
+
+		// wave show
+//		Mwindow.setSize(500,200);
+//		Mwindow.setContentPane(new Wave()); //done
+
+		// oval show
+		Mwindow.setSize(450,450);
+		Mwindow.setContentPane(new Oval()); // done
+
+		// line wave bar show
+		
+//		Mwindow.setSize(1000, 300);
+//		Mwindow.setContentPane(new LineWaveBar());
+
+		// Bar show
+//		Mwindow.setSize(1000, 300);
+//		Mwindow.setContentPane(new Bar());
+
+		// extendTree
+//		Mwindow.setSize(600,600);
+//		Mwindow.setContentPane(new ExtendTree());
+
+		
+
+		
+		Mwindow.setLocationRelativeTo(null);
+
+	}
+}

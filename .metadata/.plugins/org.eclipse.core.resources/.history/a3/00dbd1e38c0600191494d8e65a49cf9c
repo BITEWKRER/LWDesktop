@@ -1,0 +1,113 @@
+package View;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import config.Config;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JRadioButton;
+import javax.swing.JRadioButtonMenuItem;
+
+import Function.line;
+
+public class Menu extends JMenuBar {
+	private cavans Cavans;
+	public Menu(cavans cavans) {
+		this.Cavans=cavans;
+		init();
+	}
+
+	public void init() {
+		// 图形
+		JMenu mmJMenu = new JMenu("图形");
+		// 菜单项
+		JRadioButtonMenuItem line = new JRadioButtonMenuItem("line");
+		JRadioButtonMenuItem rect = new JRadioButtonMenuItem("rect");
+		line.setSelected(true);
+		mmJMenu.add(line);
+		mmJMenu.add(rect);
+		this.add(mmJMenu);
+
+		ShapeHandler sHandler = new ShapeHandler();
+		line.addActionListener(sHandler);
+		rect.addActionListener(sHandler);
+
+		// 颜色
+		JMenu mcolor = new JMenu("颜色");
+		JRadioButtonMenuItem black = new JRadioButtonMenuItem("black");
+		JRadioButtonMenuItem red = new JRadioButtonMenuItem("red");
+		JRadioButtonMenuItem white = new JRadioButtonMenuItem("white");
+
+		black.setSelected(true);
+		ColorHandler cHandler = new ColorHandler();
+		black.addActionListener(cHandler);
+		red.addActionListener(cHandler);
+		white.addActionListener(cHandler);
+
+		mcolor.add(black);
+		mcolor.add(white);
+		mcolor.add(red);
+		this.add(mcolor);
+		// clear
+		JMenu mclear = new JMenu("清除");
+		JRadioButtonMenuItem clear = new JRadioButtonMenuItem("clear");
+		ClearHandler clearHandler = new ClearHandler();
+		clear.addActionListener(clearHandler);
+		mclear.add(clear);
+		this.add(mclear);
+	}
+
+	private class ClearHandler implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			Cavans.repaint();
+			Cavans.clear();
+		}
+
+	}
+
+	private class ColorHandler implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			JMenuItem item = (JMenuItem) e.getSource();
+
+			switch (item.getText()) {
+			case "black":
+				Config.setColor("black");
+				break;
+			case "red":
+				Config.setColor("red");
+				break;
+			case "white":
+				Config.setColor("white");
+				break;
+			default:
+				break;
+			}
+			System.out.println(Config.getColor());
+		}
+	}
+
+	private class ShapeHandler implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			JMenuItem item = (JMenuItem) e.getSource();
+			switch (item.getText()) {
+			case "line":
+				Config.setShape("line");
+				break;
+			case "rect":
+				Config.setShape("rect");
+				break;
+			default:
+				break;
+			}
+			System.out.println(Config.getShape());
+		}
+	}
+}

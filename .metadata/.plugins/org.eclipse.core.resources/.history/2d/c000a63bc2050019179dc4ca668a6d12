@@ -1,0 +1,19 @@
+package trapockage;
+
+
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import trapockage.*;
+import javax.swing.table.TableStringConverter;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Translation translation = new Translation("你好", 3); // 1 中译英 2 英译中 3 中译日
+		System.out.println(	translation.Result);
+		
+	}
+}

@@ -1,0 +1,42 @@
+package Weather;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import SideBar.Setting;
+
+public class Weather {
+
+	public String info[] = new String[9];
+	public Weather() {
+		Spider();
+	}
+
+
+	public void Spider() {
+		String[] pra = { "", "", "", "" };
+
+		try {
+			String pythonFile = System.getProperty("user.dir") + "\\src\\Weather\\WeatherSpider.py";
+			pra[0] = "python";
+			pra[1] = pythonFile;
+			pra[2] = Setting.Slocation;
+			String[] paramter = new String[] { pra[0],pra[1],pra[2]};
+			Process pr = Runtime.getRuntime().exec(paramter);
+			BufferedReader in = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+			String call;
+			int i = 0;
+			while ((call = in.readLine()) != null) {
+				this.info[i] = call;
+				i++;
+			}
+			in.close();
+			pr.waitFor();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

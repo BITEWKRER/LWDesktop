@@ -1,0 +1,15 @@
+
+package main;
+
+import java.awt.EventQueue;
+
+
+import Weather.Weather;
+import trapockage.Translation;
+
+public class Entry {
+
+	public static void main(String[] args) {
+
+	}
+}

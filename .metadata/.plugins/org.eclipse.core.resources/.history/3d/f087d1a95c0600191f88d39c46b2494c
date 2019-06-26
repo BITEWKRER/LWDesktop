@@ -1,0 +1,10 @@
+package trapockage;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Translation translation = new Translation("你好", 3); // 1 中译英 2 英译中 3 中译日
+		System.out.println(	translation.Result);
+		
+	}
+}

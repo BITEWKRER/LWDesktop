@@ -1,0 +1,7 @@
+package Weather;
+
+public class TraPinyin {
+	public static toPinyin() {
+		String toPinyin(String str, String separator);
+	}
+}

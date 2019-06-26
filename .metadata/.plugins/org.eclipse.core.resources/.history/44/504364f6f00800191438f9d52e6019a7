@@ -1,0 +1,18 @@
+package Weather;
+
+import com.github.stuxuhai.jpinyin.PinyinHelper;
+
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+
+public class ToPinyin {
+
+	HanyuPinyinOutputFormat outputFormat = new HanyuPinyinOutputFormat();
+	mOutputFormat=new HanyuPinyinOutputFormat();
+	mOutputFormat.setCaseType(HanyuPinyinCaseType.LOWERCASE);// 设置大小写
+	mOutputFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);// 设置音调格式
+	
+}

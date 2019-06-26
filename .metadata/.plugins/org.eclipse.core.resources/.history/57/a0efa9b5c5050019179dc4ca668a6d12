@@ -1,0 +1,11 @@
+package CutScreen;
+
+import java.awt.AWTException;
+
+public class CutPicEntry {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

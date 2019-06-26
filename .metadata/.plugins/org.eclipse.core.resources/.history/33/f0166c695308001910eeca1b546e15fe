@@ -1,0 +1,41 @@
+package SideBar;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+import trapockage.TraHistory;
+
+public class ConfigWrite extends TraHistory{
+	public static String readTxt() {
+		try {
+			String relativepath = System.getProperty("user.dir") + "\\History.txt";
+			@SuppressWarnings("resource")
+			Scanner in = new Scanner(new File(relativepath));
+			while (in.hasNext()) {
+				String str = in.nextLine();
+				history += str + "\n";
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return history;
+	}
+	
+	public static void CleanTxt() {
+
+		try {
+			String relativepath = System.getProperty("user.dir") + "\\History.txt";
+			 FileWriter fileWriter =new FileWriter(relativepath);
+			 fileWriter.write("");
+			 fileWriter.flush();
+			 fileWriter.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

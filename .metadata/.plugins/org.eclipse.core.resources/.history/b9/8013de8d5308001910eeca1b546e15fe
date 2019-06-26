@@ -1,0 +1,21 @@
+package SideBar;
+
+import java.io.File;
+import java.io.IOException;
+
+import trapockage.TraHistory;
+
+public class ConfigWrite extends TraHistory{
+	public static boolean createTxt() throws IOException {
+		String filenameTemp;
+		boolean flag = false;
+		String path = System.getProperty("user.dir");
+		filenameTemp = path + "\\Config.txt";
+		File filename = new File(filenameTemp);
+		if (!filename.exists()) {
+			filename.createNewFile();
+			flag = true;
+		}
+		return flag;
+	}
+}

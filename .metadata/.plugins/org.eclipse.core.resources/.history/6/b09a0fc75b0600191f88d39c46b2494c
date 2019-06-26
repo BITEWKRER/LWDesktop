@@ -1,0 +1,10 @@
+package GetInfoInComputer;
+
+
+public class main {
+	public main(String[] args) {
+		//getinfo.getDisk();
+//		System.out.println(getinfo.getMemery());
+//		System.out.println(getinfo.getCpuRatioForWindows());
+	}
+}

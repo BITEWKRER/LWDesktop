@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+	<fullyQualifiedTypeName
+		name="java.lang.OutOfMemoryError" />
+	<fullyQualifiedTypeName
+		name="trapockage.HistoryGui" />
+	<fullyQualifiedTypeName
+		name="trapockage.TralationGui" />
+	<fullyQualifiedTypeName
+		name="java.awt.FlowLayout" />
+	<fullyQualifiedTypeName
+		name="java.io.BufferedWriter" />
+	<fullyQualifiedTypeName
+		name="java.io.OutputStreamWriter" />
+	<fullyQualifiedTypeName
+		name="java.io.FileOutputStream" />
+	<fullyQualifiedTypeName
+		name="javax.swing.UIManager" />
+	<fullyQualifiedTypeName name="test.sa" />
+	<fullyQualifiedTypeName
+		name="java.text.SimpleDateFormat" />
+	<fullyQualifiedTypeName name="java.util.Date" />
+	<fullyQualifiedTypeName
+		name="javax.xml.crypto.Data" />
+	<fullyQualifiedTypeName
+		name="java.io.PrintWriter" />
+	<fullyQualifiedTypeName
+		name="javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction" />
+	<fullyQualifiedTypeName name="function.Wave" />
+	<fullyQualifiedTypeName name="main.Mywindow" />
+	<fullyQualifiedTypeName name="function.Pic" />
+	<fullyQualifiedTypeName name="java.lang.Math" />
+	<fullyQualifiedTypeName
+		name="javax.swing.plaf.basic.BasicTabbedPaneUI" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JFrame" />
+	<fullyQualifiedTypeName
+		name="java.io.FileWriter" />
+	<fullyQualifiedTypeName name="java.awt.Dialog" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JDialog" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JOptionPane" />
+	<fullyQualifiedTypeName name="Weather.Weather" />
+	<fullyQualifiedTypeName name="java.lang.Boolean" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JComboBox" />
+	<fullyQualifiedTypeName
+		name="java.awt.event.ItemListener" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JTextArea" />
+	<fullyQualifiedTypeName name="java.awt.Color" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JCheckBox" />
+	<fullyQualifiedTypeName
+		name="java.awt.event.ItemEvent" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JButton" />
+	<fullyQualifiedTypeName name="java.awt.Font" />
+	<fullyQualifiedTypeName
+		name="java.awt.event.ActionListener" />
+	<fullyQualifiedTypeName
+		name="trapockage.TraHistory" />
+	<fullyQualifiedTypeName name="SideBar.Config" />
+	<fullyQualifiedTypeName name="java.util.Set" />
+	<fullyQualifiedTypeName
+		name="java.util.regex.Pattern" />
+	<fullyQualifiedTypeName name="java.lang.Integer" />
+	<fullyQualifiedTypeName
+		name="java.lang.IndexOutOfBoundsException" />
+	<fullyQualifiedTypeName
+		name="javax.swing.JLabel" />
+	<fullyQualifiedTypeName
+		name="Weather.PinProcess" />
+	<fullyQualifiedTypeName name="SideBar.mainentry" />
+	<fullyQualifiedTypeName name="java.lang.Thread" />
+	<fullyQualifiedTypeName
+		name="java.lang.Runnable" />
+	<fullyQualifiedTypeName
+		name="com.github.stuxuhai.jpinyin.PinyinFormat" />
+	<fullyQualifiedTypeName
+		name="com.github.stuxuhai.jpinyin.PinyinHelper" />
+	<fullyQualifiedTypeName name="Weather.TraPinyin" />
+	<fullyQualifiedTypeName
+		name="SideBar.InitWindow" />
+	<fullyQualifiedTypeName name="java.lang.String" />
+	<fullyQualifiedTypeName name="SideBar.Configs" />
+	<fullyQualifiedTypeName name="SideBar.Setting" />
+	<fullyQualifiedTypeName
+		name="net.sourceforge.pinyin4j.format.HanyuPinyinVCharType" />
+	<fullyQualifiedTypeName
+		name="net.sourceforge.pinyin4j.format.HanyuPinyinCaseType" />
+	<fullyQualifiedTypeName
+		name="net.sourceforge.pinyin4j.format.HanyuPinyinToneType" />
+	<fullyQualifiedTypeName
+		name="java.util.TooManyListenersException" />
+	<fullyQualifiedTypeName name="Weather.ToPinyin" />
+	<fullyQualifiedTypeName
+		name="net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination" />
+	<fullyQualifiedTypeName
+		name="net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat" />
+</qualifiedTypeNameHistroy>

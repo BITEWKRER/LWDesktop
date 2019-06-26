@@ -1,0 +1,18 @@
+package common;
+
+import java.awt.Color;
+
+import javax.swing.JWindow;
+
+public class ToolWindow extends JWindow {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public ToolWindow() {
+
+		this.setBackground(new Color(255, 255, 255, 255));
+		this.setVisible(true);
+	}
+}

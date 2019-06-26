@@ -1,0 +1,12 @@
+package xiamiDecode;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+
+public class XiamiEntry {
+
+	public static void main(String[] args) throws UnsupportedEncodingException {
+		XiamiProcess xProcess = new XiamiProcess();
+
+	}
+}

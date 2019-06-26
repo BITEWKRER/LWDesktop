@@ -1,0 +1,49 @@
+package xiamiDecode;
+
+import java.awt.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+
+import javax.xml.stream.events.Namespace;
+import xiamiDecode.XiamiEntry;
+
+public class XiamiProcess {
+
+	public String Result = "";
+	public String[] Url = new String[30];
+	public String[] Names = new String[30];
+	public int i = 0;
+
+	public XiamiProcess() {
+		Spider();
+	}
+
+	public void Spider() {
+		String[] pra = { "", "", "", "" };
+
+		try {
+			URL localSrcUrl = XiamiEntry.class.getResource("");
+			String localSrcPath = localSrcUrl.getPath();
+			// System.out.println(localSrcPath);
+			localSrcPath = localSrcPath.substring(1, localSrcPath.length());
+			// System.out.println(localSrcPath);
+			String pythonFile = localSrcPath + "XiaMiSipder.py";
+			// System.out.println(pythonFile);
+			pra[0] = "python";
+			pra[1] = pythonFile;
+			String[] paramter = new String[] { pra[0], pra[1] };
+			Process pr = Runtime.getRuntime().exec(paramter);
+			pr.waitFor();
+		} catch (
+
+		IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

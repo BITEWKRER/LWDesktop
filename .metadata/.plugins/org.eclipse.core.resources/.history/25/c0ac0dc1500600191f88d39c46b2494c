@@ -1,0 +1,13 @@
+package Weather;
+
+public class WeatherMain {
+	
+	public String s;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Weather weather = new Weather();
+		for (int i = 0; i < weather.info.length; i++) {
+			System.out.println(weather.info[i]);
+		}
+	}
+}

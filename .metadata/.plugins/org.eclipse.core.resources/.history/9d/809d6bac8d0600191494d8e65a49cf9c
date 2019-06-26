@@ -1,0 +1,25 @@
+package config;
+
+import Function.Shape;
+import Function.line;
+import Function.rect;
+
+public class shapefactory {
+	Shape shape = null;
+
+	public static Shape createShape(Shape shape) {
+		
+		switch ("shape") {
+		case "line":
+			shape = new line();
+			break;
+		case "rect":
+			shape = new rect();
+			break;
+		default:
+			break;
+		}
+		return shape;
+
+	}
+}

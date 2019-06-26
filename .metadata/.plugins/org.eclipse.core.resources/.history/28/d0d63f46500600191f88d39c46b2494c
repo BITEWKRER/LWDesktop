@@ -1,0 +1,38 @@
+package SideBar;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class ShowText extends JPanel {
+
+	private String text;
+	private int x, y, w, h;
+	private Font font = new Font("宋体", Font.PLAIN, 22);
+
+	public ShowText(int x, int y, int w, int h, String text) {
+		this.x = x;
+		this.y = y;
+		this.w = w;
+		this.h = h;
+		this.text = text;
+
+		this.setLayout(null);
+		setOpaque(false);
+		this.setBounds(x, y, w, h);
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+
+		super.paintComponent(g);
+		g.setFont(font);
+		g.setColor(new Color(200, 150, 151));
+		System.out.println(text);
+		g.drawString(text, 0, 40);
+		
+		
+	}
+}

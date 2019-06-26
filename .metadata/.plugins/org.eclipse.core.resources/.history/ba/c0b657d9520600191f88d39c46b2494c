@@ -1,0 +1,51 @@
+package Weather;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+
+public class TraHistory {
+	package com.stone.demo;
+	 
+	import java.io.File;
+	import java.io.FileNotFoundException;
+	import java.io.PrintWriter;
+	import java.util.Scanner;
+	 
+	public class ReadAndWriteTxtByScanner {
+	 
+		private static void readTxtFile(String filepath){
+			try {
+				Scanner in=new Scanner(new File(filepath));
+				while(in.hasNext()){
+					String str=in.nextLine();
+					System.out.println(str);
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		private static void writeTxtFile(String filepath){
+			try {
+				@SuppressWarnings("resource")
+				String relativepath=System.getProperty("user.dir")+"/src/com/stone/demo/writefile.txt";
+				PrintWriter out=new PrintWriter(relativepath);
+				out.write("12312");
+				out.write("\n");
+				out.write("12312");
+				out.flush();
+				out.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+
+
+
+
+}

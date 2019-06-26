@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="506" key="DIALOG_X_ORIGIN" />
+		<item value="126" key="DIALOG_Y_ORIGIN" />
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="-1" key="dialogHeight" />
+		<item value="-1" key="dialogWidth" />
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="PreferencesImportWizard">
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section
+		name="org.eclipse.ui.internal.dialogs.WorkbenchEditorsDialog">
+		<item value="0" key="sort" />
+		<item value="false" key="allPersp" />
+		<list key="columns">
+			<item value="278" />
+			<item value="558" />
+		</list>
+		<list key="bounds">
+			<item value="521" />
+			<item value="116" />
+			<item value="878" />
+			<item value="606" />
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item
+			value="org.eclipse.jdt.internal.ui.fatjarpackager.JarPackageWizard"
+			key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" />
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.jdt.ui.Java" />
+		</list>
+	</section>
+</section>

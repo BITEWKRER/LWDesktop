@@ -1,0 +1,11 @@
+package SideBar;
+
+import java.io.IOException;
+
+import trapockage.TraHistory;
+
+public class ConfigWrite extends TraHistory{
+	public static boolean createTxt() throws IOException {
+		
+	}
+}

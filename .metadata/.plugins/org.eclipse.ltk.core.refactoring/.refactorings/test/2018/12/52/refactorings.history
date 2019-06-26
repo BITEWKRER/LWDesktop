@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;beautyeye_lnf.jar&apos; to &apos;Motve_c&apos;&#x0D;&#x0A;- Original project: &apos;test&apos;&#x0D;&#x0A;- Destination element: &apos;Motve_c&apos;&#x0D;&#x0A;- Original element: &apos;beautyeye_lnf.jar&apos;" description="Copy file" destination="=Motve_c" element1="beautyeye_lnf.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1545659705085" units="0" version="1.0"/>
+</session>

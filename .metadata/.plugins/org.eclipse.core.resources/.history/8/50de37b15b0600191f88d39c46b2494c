@@ -1,0 +1,22 @@
+package common;
+
+import javax.swing.JPanel;
+
+public class WavePanel extends JPanel {
+	private static final long serialVersionUID = 1L;
+
+	private window mywindow;
+	private int xx, yy;
+	private boolean mousestatu = false;
+
+	public WavePanel() {
+		this.setOpaque(false);
+//		this.addMouseListener(new mMouseHandler());
+//		this.addMouseMotionListener(new mMouseHandler());
+	}
+
+	public void setwindow(window mywindow) {
+		this.mywindow = mywindow;
+	}
+
+}

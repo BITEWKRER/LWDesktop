@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: lib/beautyeye_lnf.jar lib/jpinyin-1.1.6.jar 
+Main-Class: SideBar.InitWindow

@@ -1,0 +1,24 @@
+package config;
+
+import Function.Shape;
+import Function.line;
+
+public class shapefactory {
+	Shape shape = null;
+
+	public static String createShape(String shape) {
+		
+		switch (shape) {
+		case "line":
+
+			break;
+		case "rect":
+
+			break;
+		default:
+			break;
+		}
+		return shape;
+
+	}
+}

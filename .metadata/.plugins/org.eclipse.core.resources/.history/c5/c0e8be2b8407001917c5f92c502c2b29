@@ -1,0 +1,17 @@
+package SideBar;
+
+import java.io.IOException;
+
+import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
+
+public class mainentry {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException {
+		BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
+		Mwindow w = new Mwindow(1920 - 1, 0, 260, 1080);
+		Thread t = new Thread(w);
+		t.start();
+	}
+}
+

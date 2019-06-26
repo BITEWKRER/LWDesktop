@@ -1,0 +1,5 @@
+package SideBar;
+import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+public class Pinyin {
+
+}

@@ -1,0 +1,8 @@
+package CutScreen;
+
+public class CutPicEntry {
+
+	public static void main(String[] args) {
+		
+	}
+}

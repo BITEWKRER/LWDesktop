@@ -1,0 +1,39 @@
+package Weather;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import SideBar.Setting;
+
+public class PinProcess {
+	public String info = new String();
+
+	public PinProcess() {
+
+		Spider();
+	}
+
+	public void Spider() {
+		String[] pra = { "", "", "", "" };
+
+		try {
+			String pythonFile = System.getProperty("user.dir") + "\\src\\Weather\\ToPinyin.exe";
+			pra[0] = pythonFile;
+			pra[1] = String.valueOf(Setting.Hlocation);
+			String[] paramter = new String[] { pra[0], pra[1] };
+			Process pr = Runtime.getRuntime().exec(paramter);
+			BufferedReader in = new BufferedReader(new InputStreamReader(pr.getInputStream()));
+			String call;
+			while ((call = in.readLine()) != null) {
+				this.info = call;
+			}
+			in.close();
+			pr.waitFor();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

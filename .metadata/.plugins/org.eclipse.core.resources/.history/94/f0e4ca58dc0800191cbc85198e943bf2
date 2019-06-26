@@ -1,0 +1,13 @@
+package Weather;
+
+import com.github.stuxuhai.jpinyin.PinyinFormat;
+import com.github.stuxuhai.jpinyin.PinyinHelper;
+
+import SideBar.Setting;
+
+public class TraPinyin {
+	public static void toPinyin() {
+		   System.out.println( PinyinHelper.convertToPinyinString(Setting.Hlocation, ",", PinyinFormat.WITHOUT_TONE)); // ni,hao,shi,jie
+		
+	}
+}

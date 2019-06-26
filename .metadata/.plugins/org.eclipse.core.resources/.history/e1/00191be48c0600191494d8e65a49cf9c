@@ -1,0 +1,53 @@
+package config;
+
+public class Server {
+	private ArrayList<Shape> shapes;//动态数组,保存之前画过的图形
+	private Shape currentShape;
+	public Server(){
+	shapes= new ArrayList<Shape>();	//实例化
+	}
+	public void create(){//得到原来的图形类型，相当于传参
+		currentShape=ShapeFactory.createShape(Config.getShapeType());
+	}
+	public void setP1(Point point){//设置起点
+		currentShape.setsPoint(point);
+	}
+	public void setP2(Point point){//设置重点
+		currentShape.setePoint(point);
+	}
+	public void clearCurrent(Graphics g){//擦除重影
+		if(currentShape.getePoint()!=null){//判断终点是否为空
+			currentShape.clear(g);
+		}
+	}
+	public void addShape() {//保存原来已经有的图形，存在动态数组中
+		if (currentShape.getePoint()!=null) {
+			shapes.add(currentShape);
+		}
+	}
+	public void drawAll(Graphics g) {//重绘原来的图形
+		for (Shape shape:shapes) {//遍历shapes集合中的所有对象，找出来重绘
+			shape.draw(g);
+		}
+	}
+	public void draw(Graphics g,Point point) {
+		if(Config.getShapeType().equals("Path")){
+			setP2(point);
+			currentShape.draw(g);
+			addShape();//加到集合里
+			create();//再创建对象
+			setP1(point);
+		}
+		else {
+			clearCurrent(g);//清除重影
+		setP2(point);
+		currentShape.draw(g);//绘出当前图形
+		//重绘之前的图形
+		drawAll(g);
+		}
+	}
+	public void clearAll() {//清空
+		currentShape=null;
+		shapes.clear();
+	}
+}

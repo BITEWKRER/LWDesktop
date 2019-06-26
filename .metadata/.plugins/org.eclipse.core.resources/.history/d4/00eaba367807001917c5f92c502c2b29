@@ -1,0 +1,17 @@
+package SideBar;
+
+import java.io.IOException;
+
+public class mainentry {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) throws IOException {
+
+		Mwindow w = new Mwindow(1920 - 1, 0, 260, 1080);
+		Thread t = new Thread(w);
+		t.start();
+
+
+	}
+}
+

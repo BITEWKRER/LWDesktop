@@ -1,0 +1,10 @@
+package Weather;
+
+public class WeatherMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Weather weather = new Weather();
+//		System.out.println(weather.Result);
+	}
+}

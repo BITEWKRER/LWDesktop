@@ -1,0 +1,17 @@
+package CutScreen;
+
+import java.awt.AWTException;
+
+public class CutPicEntry {
+
+	public static void main(String[] args) {
+		try {
+			
+			
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

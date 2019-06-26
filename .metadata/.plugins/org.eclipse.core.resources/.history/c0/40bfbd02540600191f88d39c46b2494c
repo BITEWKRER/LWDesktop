@@ -1,0 +1,12 @@
+
+package main;
+
+import Weather.TraHistory;
+
+public class Entry {
+
+	public static void main(String[] args) {
+		TraHistory.creatTxtFile();
+		TraHistory.writeTxtFile();
+	}
+}

@@ -1,0 +1,37 @@
+package trapockage;
+
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class HistoryGui extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7579989860963930980L;
+
+	public HistoryGui() {
+		this.setLayout(null);
+		String History = (String) TraHistory.readTxt();
+		JTextArea ShowHistory = new JTextArea();
+		ShowHistory.setLineWrap(true);
+		ShowHistory.setLayout(new FlowLayout());
+		ShowHistory.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 15));
+		JScrollPane inputjsp = new JScrollPane(ShowHistory);
+		inputjsp.setBounds(100, 100, 500, 500);
+		inputjsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+		ShowHistory.setText(History);
+		
+		this.add(ShowHistory);
+		this.setTitle("ÀúÊ·¼ÍÂ¼");
+		this.setSize(800, 800);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		this.setResizable(false);
+		this.setVisible(true);
+	}
+}

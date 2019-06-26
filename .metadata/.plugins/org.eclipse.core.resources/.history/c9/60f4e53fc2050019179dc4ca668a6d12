@@ -1,0 +1,10 @@
+package CutScreen;
+import CutScreen.CutSreens;
+
+public class CutPicEntry {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package Weather;
+
+import com.github.stuxuhai.jpinyin.PinyinFormat;
+import com.github.stuxuhai.jpinyin.PinyinHelper;
+
+public class ToPinyin {
+	 public String toHanyuPinyin(String ChineseLanguage){
+		 15         char[] cl_chars = ChineseLanguage.trim().toCharArray();
+		 16         String hanyupinyin = "";
+		 17         HanyuPinyinOutputFormat defaultFormat = new HanyuPinyinOutputFormat();
+		 18         defaultFormat.setCaseType(HanyuPinyinCaseType.LOWERCASE);// 输出拼音全部小写
+		 19         defaultFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);// 不带声调
+		 20         defaultFormat.setVCharType(HanyuPinyinVCharType.WITH_V) ;
+		 21         try {
+		 22             for (int i=0; i<cl_chars.length; i++){
+		 23                 if (String.valueOf(cl_chars[i]).matches("[\u4e00-\u9fa5]+")){// 如果字符是中文,则将中文转为汉语拼音
+		 24                     hanyupinyin += PinyinHelper.toHanyuPinyinStringArray(cl_chars[i], defaultFormat)[0];
+		 25                 } else {// 如果字符不是中文,则不转换
+		 26                     hanyupinyin += cl_chars[i];
+		 27                 }
+		 28             }
+		 29         } catch (BadHanyuPinyinOutputFormatCombination e) {
+		 30             System.out.println("字符不能转成汉语拼音");
+		 31         }
+		 32         return hanyupinyin;
+		 33     }
+}
